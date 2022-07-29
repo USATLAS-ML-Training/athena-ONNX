@@ -31,7 +31,7 @@ In lxplus create a workspace (e.g. mkdir onnxTutorial)
 Log out of lxplus and log back in  
 In lxplus create a new workspace (eg. 'onnxTopoclusterTutorial')
 
->mkdir onnxTopoclusterTutorial
+>mkdir onnxTopoclusterTutorial  
 >setupATLAS  
 >asetup Athena, master, latest  
 >mkdir build run  
