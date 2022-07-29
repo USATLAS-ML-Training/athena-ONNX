@@ -1,5 +1,10 @@
 # athena-ONNX
 
+If setupATLAS does not work out of the box try including the following in your .bashrc file:  
+
+>export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+>alias setupATLAS='source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+
 ## MNIST Handwritten Digit Classification
 
 In lxplus create a workspace (e.g. mkdir onnxTutorial)
@@ -24,6 +29,7 @@ In lxplus create a workspace (e.g. mkdir onnxTutorial)
 ## Topocluster calibration
 
 Log out of lxplus and log back in
+In lxplus create a workspace (e.g. mkdir onnxTopoclusterTutorial)
 
 >setupATLAS  
 >asetup Athena, master, latest  
@@ -33,15 +39,15 @@ Log out of lxplus and log back in
 >cd athena  
 >git checkout onnx_ml  
 >git atlas addpkg AthExOnnxRuntime  
-
-Change the onnx model file and input root file in the header file to match the ones shown at the end of this page.
-
 >cd ../build  
 >cmake ../athena/Projects/WorkDir  
 >make  
 >source x86_64-centos7-gcc11-opt/setup.sh  
 >cd ../run  
 >cp ../athena/Control/AthenaExamples/AthExOnnxRuntime/share/AthExOnnxRuntime_jobOptions.py .  
+
+Change the onnx model file and input root file in the header file to match the ones shown at the end of this page.
+
 >athena AthExOnnxRuntime_jobOptions.py  
 
 root file : /afs/cern.ch/work/d/dhangal/public/pi0_fully_processed_wFolds.root  
