@@ -52,4 +52,4 @@ Change the onnx model file and input root file in the job options file file 'Ath
 >athena AthExOnnxRuntime_jobOptions.py  
 
 input root file : /afs/cern.ch/work/d/dhangal/public/pi0_fully_processed_wFolds.root  
-onnx file : /afs/cern.ch/user/d/dhangal/public/model_fold0_opset10.onnx
+onnx model file : /afs/cern.ch/user/d/dhangal/public/model_fold0_opset10.onnx
