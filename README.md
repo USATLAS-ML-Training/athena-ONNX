@@ -28,9 +28,10 @@ In lxplus create a workspace (e.g. mkdir onnxTutorial)
 
 ## Topocluster calibration
 
-Log out of lxplus and log back in
-In lxplus create a workspace (e.g. mkdir onnxTopoclusterTutorial)
+Log out of lxplus and log back in  
+In lxplus create a new workspace (eg. 'onnxTopoclusterTutorial')
 
+>mkdir onnxTopoclusterTutorial
 >setupATLAS  
 >asetup Athena, master, latest  
 >mkdir build run  
@@ -46,9 +47,9 @@ In lxplus create a workspace (e.g. mkdir onnxTopoclusterTutorial)
 >cd ../run  
 >cp ../athena/Control/AthenaExamples/AthExOnnxRuntime/share/AthExOnnxRuntime_jobOptions.py .  
 
-Change the onnx model file and input root file in the header file to match the ones shown at the end of this page.
+Change the onnx model file and input root file in the job options file file 'AthExOnnxRuntime_jobOptions.py' to match the ones shown at the end of this page.
 
 >athena AthExOnnxRuntime_jobOptions.py  
 
-root file : /afs/cern.ch/work/d/dhangal/public/pi0_fully_processed_wFolds.root  
+input root file : /afs/cern.ch/work/d/dhangal/public/pi0_fully_processed_wFolds.root  
 onnx file : /afs/cern.ch/user/d/dhangal/public/model_fold0_opset10.onnx
