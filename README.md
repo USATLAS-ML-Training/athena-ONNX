@@ -32,6 +32,7 @@ Log out of lxplus and log back in
 In lxplus create a new workspace (eg. 'onnxTopoclusterTutorial')
 
 >mkdir onnxTopoclusterTutorial  
+>cd onnxTopoclusterTutorial  
 >setupATLAS  
 >asetup Athena, master, latest  
 >mkdir build run  
